@@ -4,7 +4,8 @@ import PurchasedItems from "../components/PurchasedItems";
 const Home = (props) => (
   <div>
     {/* <Link href="/upload">Upload</Link> */}
-    <PurchasedItems></PurchasedItems>
+    {/* <PurchasedItems></PurchasedItems> */}
+    
   </div>
 );
 

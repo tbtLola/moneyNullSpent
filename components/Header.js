@@ -1,36 +1,28 @@
-import Sidebar from "react-sidebar";
-import { Component } from "react";
+import Sidebar from 'react-sidebar';
+import { Component } from 'react';
+import styled from 'styled-components';
+
+
+const StyledHeader = styled.header`
+
+.mainPageTitle {
+  text-align: center; 
+  padding-left:25px;
+  padding-top:10px;
+  padding-bottom:0px;
+}
+`;
 
 class Header extends Component {
-   
-    constructor(props) {
-        super(props);
-        this.state = {
-          sidebarOpen: false,
-        };
-        this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-      }
-    
-      onSetSidebarOpen(open) {
-        this.setState({ sidebarOpen: open });
-      }
-
-      render() {
-        return (
-          <div>
-            <Sidebar
-              sidebar={<b>Sidebar content</b>}
-              open={this.state.sidebarOpen}
-              onSetOpen={this.onSetSidebarOpen}
-              styles={{ sidebar: { background: "white" } }}
-            >
-              <button onClick={() => this.onSetSidebarOpen(true)}>
-                Open sidebar
-              </button>
-            </Sidebar>
-          </div>
-        );
-      }
+  render() {
+    return (
+      <StyledHeader>
+        <div className="bar">
+          <h1 className="mainPageTitle">MoneyNullSpent</h1>
+        </div>
+      </StyledHeader>
+    );
+  }
 }
 
 export default Header;
